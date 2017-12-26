@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
+  <class name="GadsdenReporting.Models.DeliveryInfo, GadsdenReporting" table="&quot;DELIVERY_INFO&quot;" lazy="false" schema="cblock">
+    <id name="DeliveryInfoId" access="property" type="int" column="DELIVERY_INFO_ID">
+      <generator class="native"/>
+    </id>
+    <property name="DeliveryFmt" access="property" column="DELIVERY_FORMAT" />
+    <property name="OutputFmt" access="property" column="OUTPUT_FORMAT" />
+    <property name="ArchiveFmt" access="property" column="ARCHIVE_FORMAT" />
+    <property name="CrystalReportPath" access="property" column="CRYSTAL_PATH" type="String" length="500" />
+    <property name="SplitFmt" access="property" column="REPORT_SPLIT" />
+    <property name="DeliveryPath" access="property" column="DELIVERY_PATH" type="string" length="500"/>
+    <property name="DeliveryFileName" access="property" column="DELIVERY_FILE_NAME" type="string" length="100"/>
+
+    <!-- Consider making ftpCredential a many to many so one report can be dropped multiple places. -->
+    <property name="FtpCredentialId" access="property" column="FTP_CREDENTIAL_ID" insert="false" update="false"/>
+    <property name="FtpCredential" access="property"
+              class="GadsdenReporting.Models.FtpCredential, GadsdenReporting"
+              column="FTP_CREDENTIAL_ID" />
+
+    <property name="ReportId" access="property" column="REPORT_ID" insert="false" update="false" />
+    <many-to-one name="Report" access="property" column="ReportId" cascade="all" />
+
+  </class>
+</hibernate-mapping>

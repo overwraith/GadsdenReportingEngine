@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GadsdenDomainModel", "GadsdenReporting\GadsdenDomainModel.csproj", "{A64B12B3-CDE4-408F-8360-E5F2D40EF2B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GadsdenWebInterface", "GadsdenWebInterface\GadsdenWebInterface.csproj", "{CAB343E3-495E-4EC5-A2CC-3B158D9C12DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GadsdenReportingEngine", "GadsdenReportingEngine\GadsdenReportingEngine.csproj", "{5AE18C93-4D08-4262-B5F3-7532E862D63A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5A5AC6F0-46E8-4023-86B2-42B134F3A753}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A64B12B3-CDE4-408F-8360-E5F2D40EF2B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A64B12B3-CDE4-408F-8360-E5F2D40EF2B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A64B12B3-CDE4-408F-8360-E5F2D40EF2B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A64B12B3-CDE4-408F-8360-E5F2D40EF2B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB343E3-495E-4EC5-A2CC-3B158D9C12DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB343E3-495E-4EC5-A2CC-3B158D9C12DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB343E3-495E-4EC5-A2CC-3B158D9C12DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB343E3-495E-4EC5-A2CC-3B158D9C12DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AE18C93-4D08-4262-B5F3-7532E862D63A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AE18C93-4D08-4262-B5F3-7532E862D63A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AE18C93-4D08-4262-B5F3-7532E862D63A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AE18C93-4D08-4262-B5F3-7532E862D63A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

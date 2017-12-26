@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
+  <class name="GadsdenReporting.Models.Synopsis, GadsdenReporting" table="&quot;SYNOPSIS&quot;" lazy="false" schema="cblock">
+    <id name="SynopsisId" access="property" type="int" column="SYNOPSIS_ID">
+      <generator class="native"/>
+    </id>
+
+    <property name="ImplementerId" access="property" column="IMPLEMENTER_ID" insert="false" update="false" />
+    <property name="Implementer" access="property" class="GadsdenReporting.Models.User"/>
+
+    <bag name="Reccomender" access="property" cascade="all-delete-orphan" lazy="false" inverse="true">
+      <key>
+        <column name="SYNOPSIS_ID" />
+      </key>
+      <one-to-many class="GadsdenReporting.Models.User, GadsdenReporting" />
+    </bag>
+
+    <property name="DateCreated" access="property" column="DATE_CREATED" />
+    <property name="BusinessCase" access="property" column="BUSINESS_CASE" type="StringClob" />
+
+    <property name="ReportId" access="property" column="REPORT_ID" insert="false" update="false" />
+    <many-to-one name="Report" access="property" column="REPORT_ID"/>
+  </class>
+</hibernate-mapping>

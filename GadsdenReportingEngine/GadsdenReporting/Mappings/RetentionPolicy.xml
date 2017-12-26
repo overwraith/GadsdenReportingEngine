@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
+  <class name="GadsdenReporting.Models.RetentionPolicy, GadsdenReporting" table="RETENTION_POLICY" lazy="false" schema="cblock">
+    <id name="RetentionId" access="property" type="long" column="RETENTION_ID">
+      <generator mclass="native" />
+    </id>
+    <property name="RetentionInterval" access="property" column="RETENTION_INTERVAL" />
+    <property name="DeprecationDate" access="property" column="DEPRECATION_DATE" />
+
+    <property name="ReportId" access="property" column="REPORT_ID" insert="false" update="false"/>
+    <property name="Report" access="property" 
+              class="GadsdenReporting.Models.Report, GadsdenReporting" 
+              column="REPORT_ID" />
+  </class>
+</hibernate-mapping>
